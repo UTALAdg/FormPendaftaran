@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+  <link rel = "stylsheet" href="css.ku.css">
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Mengatur font dasar untuk halaman */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Gaya untuk form */
+  form {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 15px;
+  }
+  
+  /* Gaya untuk setiap label */
+  label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Gaya untuk input dan select */
+  input[type="text"],
+  input[type="date"],
+  select,
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* Gaya untuk input radio dan checkbox */
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  /* Gaya untuk tombol submit */
+  button[type="submit"] {
+    background-color: #00ff6a;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  /* Gaya untuk tombol saat hover */
+  button[type="submit"]:hover {
+    background-color: #ffffff;
+  }
+  
+  /* Gaya untuk elemen yang memiliki checkbox Remember Me */
+  div {
+    margin-bottom: 15px;
+  }
+  
+  /* Menata form untuk elemen inline seperti radio buttons */
+  input[type="radio"],
+  label[for="male"],
+  label[for="female"] {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  /* Gaya untuk elemen yang lebih besar seperti hobi */
+  div > label {
+    font-weight: normal;
+    display: inline;
+    margin-right: 15px;
+  }
+  
+  select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+  }
+  
+  /* Menambah margin pada elemen form */
+  div {
+    margin-bottom: 15px;
+  }
+</style>
+<body>
+<form>
+    <div>
+    <label for="Nama Lengkap">Nama Lengkap</label>
+   <br/>
+    <input id="fullName" name="Nama Lengkap" required />
+    </div>
+    <div>
+       <label for="Alamat">Alamat</label>
+       <br/>
+       <input type="text" id="" name="" required>
+    </div>
+   
+    <div>
+    <label for="Tempat Lahir">Tempat Lahir</label>
+   <br/>
+    <input type="text" id="" name="Tempat Lahir" required />
+    </div>
+   
+    <div>
+    <label for="Tanggal Lahir">Tanggal Lahir</label>
+   <br/>
+    <input type="date" id="" name="Tanggal Lahir" required />
+     </div>
+
+   <div>
+       <label for="Jenis Kelamin">Jenis Kelamin</label>
+       <br/>
+       <input type="radio" id="" name="Jenis Kelamin">
+
+       <label for="male">Laki-laki</label>
+       <br/>
+       <input type="radio" id="male" name="gender" value="male" class="custom-radio">
+ 
+       <label for="female">Perempuan</label>
+ <br/>
+ 
+   </div>
+
+   <div>
+       Pilih Hobi:
+       <br/>
+       <label><input type="checkbox" name="hobi" value="membaca"> Membaca</label><br>
+       <label><input type="checkbox" name="hobi" value="traveling"> Traveling</label><br>
+       <label><input type="checkbox" name="hobi" value="olahraga"> Olahraga</label><br>
+   </div>
+    
+   <div>
+       <label for="kelas">Pilih Kelas:</label>
+       <br/>
+ <select name="kelas" id="kelas">
+   <br/>
+   <option value="kelasA">X PPLG 1</option>
+   <option value="kelasB">X PPLG 2</option>
+ </select>
+   <br>
+   </div>
+
+<div>
+   <label>
+       <input type="checkbox" id="remember-me" name="remember-me">
+       Remember Me
+     </label>
+     <br><br>
+</div>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
